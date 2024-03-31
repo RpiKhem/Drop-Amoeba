@@ -1,2 +1,2 @@
 # Drop-Amoeba
-Drop Amoeba game using Java swing (university task)
+Drop Amoeba game using C++/Qt (university task)
