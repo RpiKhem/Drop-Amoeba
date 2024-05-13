@@ -1,2 +1,2 @@
 # Drop-Amoeba
-Drop Amoeba game using C++/Qt
+Drop Amoeba game using C++/Qt (work pc)
