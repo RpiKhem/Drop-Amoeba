@@ -25,10 +25,11 @@ qt_standard_project_setup()
 add_executable(Drop-Amoeba DropAmoeba/main.cpp DropAmoeba/amoebaview.cpp DropAmoeba/amoebamodel.cpp DropAmoeba/amoebapersist.cpp)
 
 if(MSVC)
-    target_compile_options(${TARGET_NAME} /W4 /WX)
-else()
-    target_compile_options(${TARGET_NAME} -Wall -Wextra -pedantic -Werror)
-endif()
+	set(GUI_TYPE WIN32)
+	add_compile_options(/MP)
+elseif(CMAKE_COMPILER_IS_GNUCXX)
+	add_compile_options(-std=c++17)
+endif(MSVC)
 
 # Link to the Qt Core library
 target_link_libraries(Drop-Amoeba Qt6::Widgets)
