@@ -24,6 +24,12 @@ qt_standard_project_setup()
 # Add the executable
 add_executable(Drop-Amoeba DropAmoeba/main.cpp DropAmoeba/amoebaview.cpp DropAmoeba/amoebamodel.cpp DropAmoeba/amoebapersist.cpp)
 
+if(MSVC)
+    target_compile_options(${TARGET_NAME} PRIVATE /W4 /WX)
+else()
+    target_compile_options(${TARGET_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
+endif()
+
 # Link to the Qt Core library
 target_link_libraries(Drop-Amoeba PRIVATE Qt6::Widgets)
 
