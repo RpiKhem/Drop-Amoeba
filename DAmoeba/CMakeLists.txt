@@ -9,7 +9,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# target_compile_options(qt_cmake PUBLIC "/Zc:__cplusplus")
+# target_compile_options(qt_cmake PUBLIC "/Zc:__cplusplus" "-permissive-")
 # Add the /Zc:__cplusplus option for MSVC
 if(MSVC)
     add_compile_options(/Zc:__cplusplus)
