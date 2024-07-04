@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Add the /Zc:__cplusplus option for MSVC
 if(MSVC)
     add_compile_options(/Zc:__cplusplus)
-    add_compile_options(/permissive)
+    add_compile_options(/permissive-)
 endif()
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
